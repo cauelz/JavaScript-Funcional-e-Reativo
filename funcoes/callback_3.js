@@ -13,3 +13,21 @@ const nomes = ['Ana', 'Bia', 'Gui', 'Lisa', 'Rafa'];
 const primeiraLetra = texto => texto[0];
 const letras = nomes.map(primeiraLetra);
 console.log(nomes, letras);
+
+const carrinho = [
+  { nome: 'Caneta', quantidade: 10, preco: 7.99 },
+  { nome: 'Caderno', quantidade: 3, preco: 17.34 },
+  { nome: 'Lapis', quantidade: 4, preco: 2.50 },
+  { nome: 'Tesoura', quantidade: 5, preco: 12.45 },
+  { nome: 'Impressora', quantidade: 1, preco: 764.45 },
+]
+
+const nomesProdutos = carrinho.map(produto => {
+  return produto.nome;
+})
+console.log(nomesProdutos);
+
+const precoTotalPorItem = carrinho.map(produto => {
+  return (produto.quantidade * produto.preco).toFixed(2);
+})
+console.log(precoTotalPorItem);
