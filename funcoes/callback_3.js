@@ -31,3 +31,14 @@ const precoTotalPorItem = carrinho.map(produto => {
   return (produto.quantidade * produto.preco).toFixed(2);
 })
 console.log(precoTotalPorItem);
+
+// construindo meu proprio Map
+Array.prototype.meuMap = function (fn) {
+  const novoArray = [];
+  for (let i = 0; i < this.length; i++) {
+
+    const resultado = fn(this[i], i, this);
+    novoArray.push(resultado);
+  }
+  return resultado;
+}
